@@ -1,10 +1,9 @@
 {
-  "name": "fundopurselves_ui_storybook",
+  "name": "finular_storybook",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "dist/storybook.min.js",
   "files": [
-    "dist",
-    "stories"
+    "dist/storybook.min.js"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
