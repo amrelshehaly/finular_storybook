@@ -6,7 +6,7 @@ import terser from '@rollup/plugin-terser';
 export default {
   input: 'stories/index.js',
   output: {
-    file: 'dist/index.min.js',
+    file: 'dist/storybook.min.js',
     format: 'cjs',
     exports: 'named',
     sourcemap: true,
