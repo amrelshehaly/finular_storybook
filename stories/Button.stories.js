@@ -1,5 +1,5 @@
 import { fn } from '@storybook/test';
-import { createButton } from './Button';
+import { Button } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
@@ -8,7 +8,7 @@ export default {
   render: ({ label, width, ...args }) => {
     // You can either use a function to create DOM elements or use a plain html string!
     // return `<div>${label}</div>`;
-    return createButton({ label, width, ...args });
+    return Button({ label, width, ...args });
   },
   argTypes: {
     backgroundColor: { control: 'color' },
