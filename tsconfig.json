@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "NodeNext",
+        "strict": true,
+        "jsx": "react",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "dist",
+        "sourceMap": true,
+        "moduleResolution": "NodeNext"
+    },
+    "include": ["stories/**/*"],
+    "exclude": ["node_modules/**/*"]
+}

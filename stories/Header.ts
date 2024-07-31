@@ -1,7 +1,16 @@
 import './header.css';
-import { createButton } from './Button';
+import { Button } from './Button';
 
-export const createHeader = ({ user, onLogout, onLogin, onCreateAccount }) => {
+export type HeaderProps = {
+  user: {
+    name: string
+  },
+  onLogout: () => void,
+  onLogin: () => void,
+  onCreateAccount: () => void
+}
+
+export const createHeader = ({ user, onLogout, onLogin, onCreateAccount }: HeaderProps) => {
   const header = document.createElement('header');
 
   const wrapper = document.createElement('div');
@@ -28,15 +37,14 @@ export const createHeader = ({ user, onLogout, onLogin, onCreateAccount }) => {
   if (user) {
     const welcomeMessage = `<span class="welcome">Welcome, <b>${user.name}</b>!</span>`;
     account.innerHTML = welcomeMessage;
-    account.appendChild(createButton({ size: 'small', label: 'Log out', onClick: onLogout }));
+    account.appendChild(Button({ size: 'medium', label: 'Log out', onClick: onLogout }));
   } else {
-    account.appendChild(createButton({ size: 'small', label: 'Log in', onClick: onLogin }));
+    account.appendChild(Button({ size: 'medium', label: 'Log in', onClick: onLogin }));
     account.appendChild(
-      createButton({
-        size: 'small',
+      Button({
+        size: 'medium',
         label: 'Sign up',
         onClick: onCreateAccount,
-        primary: true,
       })
     );
   }

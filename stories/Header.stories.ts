@@ -1,5 +1,6 @@
 import { fn } from '@storybook/test';
-import { createHeader } from './Header';
+import { createHeader, HeaderProps } from './Header';
+import { Meta } from '@storybook/html';
 
 export default {
   title: 'Example/Header',
@@ -15,7 +16,7 @@ export default {
     onLogout: fn(),
     onCreateAccount: fn(),
   },
-};
+} as Meta<HeaderProps>;
 
 export const LoggedIn = {
   args: {

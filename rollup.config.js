@@ -1,13 +1,16 @@
 import babel from 'rollup-plugin-babel';
 import css from 'rollup-plugin-css-only';
 import terser from '@rollup/plugin-terser';
+import resolve from '@rollup/plugin-node-resolve';
+import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
 
 
 export default {
-  input: 'stories/index.js',
+  input: 'stories/index.ts',
   output: {
     file: 'dist/storybook.min.js',
-    format: 'cjs',
+    format: 'iife',
     exports: 'named',
     sourcemap: true,
   },
@@ -16,11 +19,14 @@ export default {
     babel({
       exclude: 'node_modules/**'
     }),
+    resolve(),
+    commonjs(),
+    typescript(),
     terser()
   ],
-  external: [
-    'react',
-    'react-dom',
-    // other external dependencies
-  ]
+  // external: [
+  //   'react',
+  //   'react-dom',
+  //   // other external dependencies
+  // ]
 };
