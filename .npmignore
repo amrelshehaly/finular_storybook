@@ -1,0 +1,7 @@
+node_modules
+stories
+scripts
+tests
+*.log
+*.ts
+*.map

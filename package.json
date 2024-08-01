@@ -1,9 +1,10 @@
 {
   "name": "finular_storybook",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/storybook.min.js",
+  "types": "dist/types/index.d.ts",
   "files": [
-    "dist/storybook.min.js"
+    "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
