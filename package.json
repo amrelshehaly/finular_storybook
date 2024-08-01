@@ -1,6 +1,6 @@
 {
   "name": "finular_storybook",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/storybook.min.js",
   "types": "dist/types/index.d.ts",
   "files": [
