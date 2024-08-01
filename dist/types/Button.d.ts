@@ -9,4 +9,4 @@ export type ButtonProps = {
     fontSize?: string;
     fontWeight?: string;
 };
-export declare const Button: ({ size, backgroundColor, label, onClick, onMouseEnter, width, height, fontSize, fontWeight }: ButtonProps) => HTMLDivElement;
+export declare function Button({ size, backgroundColor, label, onClick, onMouseEnter, width, height, fontSize, fontWeight }: ButtonProps): HTMLDivElement;
