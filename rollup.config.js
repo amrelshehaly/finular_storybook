@@ -21,7 +21,9 @@ export default {
     }),
     resolve(),
     commonjs(),
-    typescript(),
+    typescript({
+      tsconfig: "./tsconfig.json"
+    }),
     terser()
   ],
   // external: [
