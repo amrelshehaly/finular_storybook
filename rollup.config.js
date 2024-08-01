@@ -10,7 +10,7 @@ export default {
   input: 'stories/index.ts',
   output: {
     file: 'dist/storybook.min.js',
-    format: 'iife',
+    format: 'cjs',
     exports: 'named',
     sourcemap: true,
   },
