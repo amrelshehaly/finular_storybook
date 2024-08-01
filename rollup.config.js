@@ -26,9 +26,4 @@ export default {
     }),
     terser()
   ],
-  // external: [
-  //   'react',
-  //   'react-dom',
-  //   // other external dependencies
-  // ]
 };

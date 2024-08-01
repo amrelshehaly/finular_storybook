@@ -11,7 +11,7 @@ export type ButtonProps = {
 }
 
 
-export const Button = ({
+export function Button ({
   size = 'large',
   backgroundColor = "#01AD09",
   label,
@@ -21,7 +21,7 @@ export const Button = ({
   height,
   fontSize,
   fontWeight
-}: ButtonProps) => {
+}: ButtonProps) {
   const container = document.createElement('div');
   const btn = document.createElement('button');
   btn.type = 'button';
