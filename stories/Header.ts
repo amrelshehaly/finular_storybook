@@ -1,5 +1,5 @@
 import './header.css';
-import { Button } from './Button';
+import { CreateButton } from './Button/Button';
 
 export type HeaderProps = {
   user: {
@@ -37,11 +37,11 @@ export const createHeader = ({ user, onLogout, onLogin, onCreateAccount }: Heade
   if (user) {
     const welcomeMessage = `<span class="welcome">Welcome, <b>${user.name}</b>!</span>`;
     account.innerHTML = welcomeMessage;
-    account.appendChild(Button({ size: 'medium', label: 'Log out', onClick: onLogout }));
+    account.appendChild(CreateButton({ size: 'medium', label: 'Log out', onClick: onLogout }));
   } else {
-    account.appendChild(Button({ size: 'medium', label: 'Log in', onClick: onLogin }));
+    account.appendChild(CreateButton({ size: 'medium', label: 'Log in', onClick: onLogin }));
     account.appendChild(
-      Button({
+      CreateButton({
         size: 'medium',
         label: 'Sign up',
         onClick: onCreateAccount,
