@@ -11,9 +11,9 @@ export type ButtonProps = {
 }
 
 
-export function Button ({
+export function CreateButton ({
   size = 'large',
-  backgroundColor = "#01AD09",
+  backgroundColor,
   label,
   onClick,
   onMouseEnter,
@@ -34,28 +34,20 @@ export function Button ({
   })
 
   btn.addEventListener("mouseleave", () => {
-    btn.style.backgroundColor = backgroundColor
+    btn.style.backgroundColor = "#01AD09"
   })
 
   btn.className = size === 'large'? 
     [
-      "text-white py-[12px] px-[24px] rounded-lg h-[60px]",
+      "flex items-center justify-center py-[12px] px-[24px] rounded-lg h-[60px]",
       "text-[20px] font-bold text-white",
-      `bg-[${backgroundColor}]`
+      `bg-[#01AD09]`
     ].join(" "):
     [
-      "text-white py-[12px] px-[16px] rounded-lg h-[36px]",
-      "text-[14px] font-semibold leading-3",
-      `bg-[${backgroundColor}]`,
+      "flex items-center justify-center py-[12px] px-[16px] rounded-lg h-[36px]",
+      "text-[14px] font-semibold text-white",
+      `bg-[#01AD09]`,
     ].join(" ");
-
-  // btn.style.width = width + "px"
-
-  // btn.style.fontSize = fontSize ?? "20px";
-  // btn.style.fontWeight= fontWeight ?? "700";
-
-
-  console.log(btn.className)
 
   btn.style.backgroundColor = backgroundColor ?? '';
 

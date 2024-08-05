@@ -20,6 +20,7 @@
 
 module.exports = {
   stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
+  staticDirs: ['../stories'],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
